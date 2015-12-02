@@ -15,6 +15,16 @@
     <link href="http://pythonbrasil.github.io/apyb/theme/pygments/perldoc.css" rel="stylesheet">
     <link href="http://pythonbrasil.github.io/apyb/theme/apyb/css/base.css" rel="stylesheet">
 
+    
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-flash.css"
+          rel="stylesheet">
+
+    <style>
+        .hide-google-groups {
+            display: none;
+        }
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -51,7 +61,7 @@
                         <a href="eventos">Eventos</a>
                       </li>
                       <li >
-                        <a href="python-brasil">Python Brasil</a>
+                        <a href="python-brasil">Conferência Python Brasil</a>
                       </li>
                       <li >
                         <a href="patrocinio">Patrocínio</a>
@@ -69,17 +79,38 @@
 
     <main>
       <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <ol class="breadcrumb">
-        <li><a href="index">Home</a></li>
-        <li class="active">Comunidade</li>
-      </ol>
-      <hr>
-      <h1>Comunidade</h1>
-      <html><body><p>Página para catalogar os grupos regionais que divulgam a linguagem.</p></body></html>
+    <div class="row">
+        <div class="col-xs-12">
+            <ol class="breadcrumb">
+                <li><a href="index">Home</a></li>
+                <li class="active">Comunidade</li>
+            </ol>
+            <hr>
+            <h1>Comunidade</h1>
+
+            <html><body><p>Página para catalogar os grupos regionais que divulgam a linguagem.</p></body></html>
+
+        </div>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <hr>
+            <h3>Python Brasil no Google Groups</h3>
+
+            <div id="google-groups-section" class="hide-google-groups">
+                <iframe id="forum_embed" class="center-block" frameborder="0" scrolling="no" width="900"
+                        height="700"></iframe>
+            </div>
+            <div id="google-space" style="height: 700px">
+                <h4>
+                    <p>
+                        Carregando Lista de email no Google Groups, aguarde...
+                    </p>
+                </h4>
+            </div>
+        </div>
+    </div>
+
       </div>
     </main>
 
@@ -98,6 +129,9 @@
 
             <ul>
                 <li><a href="https://github.com/pythonbrasil"><icon class="fa fa-github"></icon> GitHub</a></li>
+                <li><a href="https://twitter.com/pythonbrasil"><icon class="fa fa-twitter"></icon> Twitter</a></li>
+                <li><a href="https://www.facebook.com/groups/python.brasil"><icon class="fa fa-facebook"></icon> Facebook</a></li>
+                <li><a href="https://groups.google.com/forum/#!forum/python-brasil"><icon class="fa fa-users"></icon> Lista de emails</a></li>
             </ul>
           </div>
         </div>
@@ -108,6 +142,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://pythonbrasil.github.io/apyb/theme/bootstrap/js/bootstrap.min.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js"></script>
+    <script>
+        Pace.paceOptions = {
+            document: false, // disabled
+            eventLag: true, // disabled
+            elements: {
+                selectors: ['#forum_embed']
+            }
+        };
+        Pace.track(function () {
+
+            $('#forum_embed').attr({
+                src: 'https://groups.google.com/forum/embed/?place=forum/python-brasil'
+                + '&showsearch=true&showpopout=true&showtabs=false'
+                + '&parenturl=' + encodeURIComponent(window.location.href)
+            });
+
+        });
+
+        Pace.on('hide', function () {
+
+            $("#google-space").fadeOut("fast");
+            $("#google-groups-section").fadeIn("fast");
+
+        });
+    </script>
 
   </body>
 </html>
