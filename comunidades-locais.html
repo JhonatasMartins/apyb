@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>APyB-Comunidade</title>
+    <title>APyB-Comunidades Locais</title>
 
     <!-- Favicon -->
     <link href="http://pythonbrasil.github.io/apyb/theme/apyb/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
@@ -15,14 +15,6 @@
     <link href="http://pythonbrasil.github.io/apyb/theme/pygments/perldoc.css" rel="stylesheet">
     <link href="http://pythonbrasil.github.io/apyb/theme/apyb/css/base.css" rel="stylesheet">
 
-  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-flash.css" rel="stylesheet">
-
-  <style>
-    .hide-google-groups {
-      display: none;
-    }
-  </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,8 +47,14 @@
                         <li >
                           <a href="http://pythonbrasil.github.io/apyb/associe-se">Associe-se</a>
                         </li>
-                        <li class="active">
-                          <a href="http://pythonbrasil.github.io/apyb/comunidade">Comunidade</a>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Comunidade <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu navbar-apyb">
+                              <li><a href="/python-brasil-group">Python Brasil Group</a></li>
+                              <li><a href="/comunidades-locais">Comunidades Locais</a></li>
+                          </ul>
                         </li>
                         <li >
                           <a href="http://pythonbrasil.github.io/apyb/eventos">Eventos</a>
@@ -86,12 +84,12 @@
       <ol class="breadcrumb">
         <li><a href="http://pythonbrasil.github.io/apyb/index">Home</a></li>
 
-        <li class="active">Comunidade</li>
+        <li class="active">Comunidades Locais</li>
       </ol>
 
       <hr>
 
-      <h1>Comunidade</h1>
+      <h1>Comunidades Locais</h1>
 
       <html><body><p>Conheça os grupos de usuários de Python espalhados pelo Brasil.</p>
 <p>Mais informações, acesse: <a href="http://wiki.python.org.br/GrupoDeUsuarios">http://wiki.python.org.br/GrupoDeUsuarios</a></p>
@@ -201,25 +199,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-xs-12">
-      <hr>
-
-      <h3>Python Brasil no Google Groups</h3>
-
-      <div id="google-groups-section" class="hide-google-groups">
-        <iframe id="forum_embed" class="center-block" frameborder="0" scrolling="no" width="100%" height="700"></iframe>
-      </div>
-
-      <div id="google-space" style="height: 700px">
-        <h4>
-          <p>
-            Carregando Lista de email no Google Groups, aguarde...
-          </p>
-        </h4>
-      </div>
-    </div>
-  </div>
       </div>
     </main>
 
@@ -250,31 +229,5 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://pythonbrasil.github.io/apyb/theme/bootstrap/js/bootstrap.min.js"></script>
 
-  
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js"></script>
-
-  <script>
-    Pace.paceOptions = {
-      document: false, // disabled
-      eventLag: true, // enabled
-      elements: {
-        selectors: ['#forum_embed']
-      }
-    };
-
-    Pace.track(function () {
-      $('#forum_embed').attr({
-        src: 'https://groups.google.com/forum/embed/?place=forum/python-brasil'
-        + '&showsearch=true&showpopout=true&showtabs=false'
-        + '&parenturl=' + encodeURIComponent(window.location.href)
-      });
-    });
-
-    Pace.on('hide', function () {
-      $("#google-space").fadeOut("fast");
-      $("#google-groups-section").fadeIn("fast");
-    });
-  </script>
   </body>
 </html>
