@@ -13,6 +13,7 @@
     <link href="http://pythonbrasil.github.io/apyb/theme/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://pythonbrasil.github.io/apyb/theme/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="http://pythonbrasil.github.io/apyb/theme/pygments/perldoc.css" rel="stylesheet">
+    <link href="http://pythonbrasil.github.io/apyb/theme/apyb/css/components.css" rel="stylesheet">
     <link href="http://pythonbrasil.github.io/apyb/theme/apyb/css/base.css" rel="stylesheet">
 
 
@@ -28,6 +29,60 @@
   </head>
 
   <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="navbar-brand" href="http://pythonbrasil.github.io/apyb">APyB</a>
+        </div>
+        <div id="slidemenu">
+          <div class="menu-logo">
+            <img src="http://pythonbrasil.github.io/apyb/theme/apyb/img/site-logo.svg" title="APyB" alt="APyB">
+          </div>
+
+          <ul class="nav navbar-nav">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Sobre <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="http://pythonbrasil.github.io/apyb/apyb">A APyB</a></li>
+                      <li><a href="http://pythonbrasil.github.io/apyb/estatuto">Estatuto</a></li>
+                      <li><a href="http://pythonbrasil.github.io/apyb/associe-se">Associe-se</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    Comunidade <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="http://pythonbrasil.github.io/apyb/comunidades-locais">Comunidades Locais</a></li>
+                      <li><a href="http://pythonbrasil.github.io/apyb/lista-de-discussoes">Lista de Discussões</a></li>
+                  </ul>
+                </li>
+                <li class="active">
+                  <a href="http://pythonbrasil.github.io/apyb/eventos">Eventos</a>
+                </li>
+                <li >
+                  <a href="http://pythonbrasil.github.io/apyb/python-brasil">Conferência Python Brasil</a>
+                </li>
+                <li >
+                  <a href="http://pythonbrasil.github.io/apyb/premio-dorneles-tremea">Prêmio Dorneles Treméa</a>
+                </li>
+                <li >
+                  <a href="http://pythonbrasil.github.io/apyb/patrocinio">Patrocínio</a>
+                </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <header>
       <div class="container">
         <div class="row">
@@ -36,45 +91,6 @@
               <a href="http://pythonbrasil.github.io/apyb/index">
                 <img class="header-logo" src="http://pythonbrasil.github.io/apyb/theme/apyb/img/site-logo.svg" title="APyB" alt="APyB"/>
               </a>
-
-              <nav class="navbar navbar-default navbar-inverse navbar-apyb">
-                <div class="container">
-                  <ul class="nav navbar-nav">
-
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Sobre <span class="caret"></span>
-                          </a>
-                          <ul class="dropdown-menu navbar-apyb">
-                              <li><a href="http://pythonbrasil.github.io/apyb/apyb">A APyB</a></li>
-                              <li><a href="http://pythonbrasil.github.io/apyb/estatuto">Estatuto</a></li>
-                              <li><a href="http://pythonbrasil.github.io/apyb/associe-se">Associe-se</a></li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Comunidade <span class="caret"></span>
-                          </a>
-                          <ul class="dropdown-menu navbar-apyb">
-                              <li><a href="http://pythonbrasil.github.io/apyb/comunidades-locais">Comunidades Locais</a></li>
-                              <li><a href="http://pythonbrasil.github.io/apyb/lista-de-discussoes">Lista de Discussões</a></li>
-                          </ul>
-                        </li>
-                        <li class="active">
-                          <a href="http://pythonbrasil.github.io/apyb/eventos">Eventos</a>
-                        </li>
-                        <li >
-                          <a href="http://pythonbrasil.github.io/apyb/python-brasil">Conferência Python Brasil</a>
-                        </li>
-                        <li >
-                          <a href="http://pythonbrasil.github.io/apyb/premio-dorneles-tremea">Prêmio Dorneles Treméa</a>
-                        </li>
-                        <li >
-                          <a href="http://pythonbrasil.github.io/apyb/patrocinio">Patrocínio</a>
-                        </li>
-                  </ul>
-                </div>
-              </nav>
 
               <h2 class="header-subtitle">A APyB tem como objetivo promover e apoiar iniciativas da comunidade Python no Brasil, empoderando a comunidade sem se apropriar da mesma.</h2>
             </div>
@@ -131,6 +147,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="http://pythonbrasil.github.io/apyb/theme/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://pythonbrasil.github.io/apyb/theme/apyb/js/components.js"></script>
 
   </body>
 </html>
